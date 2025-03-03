@@ -1,0 +1,504 @@
+    1  cd my_project
+    2  git clone https://github.com/isiddharth34/first-contributions.git
+    3  pwd
+    4  cd ~/Desktop
+    5  git clone https://github.com/isiddharth34/first-contributions.git
+    6  git config --global http.postBuffer 524288000
+    7  git clone https://github.com/isiddharth34/first-contributions.git
+    8  git clone --depth 1 https://github.com/isiddharth34/first-contributions.git
+    9  git clone --depth 1 https://github.com/isiddharth34/first-contributions.git
+   10  cd ~/Desktop
+   11  git clone --depth 1 https://github.com/isiddharth34/first-contributions.git
+   12  rm -rf first-contributions
+   13  git clone --depth 1 https://github.com/isiddharth34/first-contributions.git
+   14  cd first-contributions
+   15  ls -la
+   16  cat README.md
+   17  git clone https://github.com/your-username/your-repository.git
+   18  git clone https://github.com/isiddharth34/my_project.git
+   19  cd my_project
+   20  nano README.md
+   21  git add README.md
+   22  git commit -m "Update Day 2 with forking and cloning process"
+   23  git push origin main
+   24  git add
+   25  git add
+   26  git ini
+   27  git init
+   28  ls -1
+   29  cd~
+   30  cd ~ git init
+   31  cd ~/my_project
+   32  git status
+   33  echo "This is my project" > README.md
+   34  git add .
+   35  git commit -m "Add README file with project description"
+   36  git remote add origin https://github.com/thesiddharth34/my_project.git
+   37  git branch -M main
+   38  git push -u origin main
+   39  git remote -v
+   40  ping github.com
+   41   git add .
+   42  git commit -m "Initial commit"  # Or a message describing your changes
+   43  git push -u origin main
+   44  git pull origin main --rebase
+   45  git add <conflicting-file>
+   46  git status
+   47  git log
+   48  cd ~/Desktop 
+   49  git log
+   50  cd my_project
+   51  git clone https://github.com/isiddharth34
+   52  git clone git clone cd https://github.com/isiddharth34/my_project
+   53  git clone https://github.com/isiddharth34/my_project
+   54  cd my_project
+   55  git log 
+   56  git clone https://github.com/isiddharth34/first-contributions
+   57  cd desktop
+   58  cd Desktop
+   59  cd dekstop
+   60  cd Desktop
+   61  cd ~desktop
+   62  cd ~Desktop
+   63  cd ~
+   64  cd Desktop
+   65  git clone https://github.com/isiddharth34/first-contributions
+   66  cd ~
+   67  cd Desktop
+   68  git clone -- depth 1 https://github.com/isiddharth34/first-contributions
+   69  cd ~ 
+   70  cd Desktop 
+   71  git clone --depth https://github.com/isiddharth34/first-contributions
+   72  cd ~
+   73  cd Desktop 
+   74  git clone --depth 1 https://github.com/isiddharth34/first-contributions
+   75  cd first-contribution
+   76  cd first-contributions
+   77  ls
+   78  cd ~/Desktop
+   79  rm -rf first-contributions
+   80  git clone --depth 1 https://github.com/isiddharth34/first-contributions
+   81  cd first-contributions
+   82  git remote add upstream https://github.com/firstcontributions/first-contributions
+   83  git remote -v
+   84  git checkout -b feature-branch
+   85  git add .
+   86  git commit -m "Description of the changes made"
+   87  git push origin feature-branch
+   88  git branch
+   89  git checkout -b feature-branch
+   90  git checkout -b main
+   91  git add .
+   92  git commit -m "day 4 of 100 days challenge"
+   93  git push origin feature-branch
+   94  git status
+   95  git push origin feature-branch
+   96  git diff main feature-branch
+   97  echo "Test content" >> test.txt
+   98  git add test.txt
+   99  git commit -m "Add test file"
+  100  git push origin feature-branch
+  101  cd ~
+  102  cd Desktop
+  103  git clone https://github.com/siddengineer/leetcode-solution
+  104  git clone https://github.com/siddengineer/leetcode-solution
+  105  git clone https://github.com/siddengineer/leetcode-solutions
+  106  cd ~/Desktop/leetcode-solutions
+  107  git add .
+  108  git commit -m "Add initial LeetCode solutions"
+  109  git push origin main
+  110  git branch
+  111  git push origin master
+  112  git branch
+  113  git add .
+  114  git commit -m "Initial commit with LeetCode solutions"
+  115  git push origin main
+  116  echo "Hello, GitHub!" > hello.txt
+  117  git add .
+  118  echo 'Hello, GitHub!' > hello.txt
+  119  git add .
+  120  git commit -m "Add hello.txt with 'Hello, GitHub\!' text"
+  121  git push origin main
+  122  cd~ desktop 
+  123  cd ~
+  124  cd Desktop
+  125  git clone https://github.com/isiddharth34/my_project
+  126  cd ~/Desktop/my_project
+  127  git status
+  128  git diff
+  129  git status
+  130  git status
+  131  git status
+  132  git diff --cached
+  133  git log --oneline
+  134  git status
+  135  git status
+  136  git status
+  137  git add README.md
+  138  git status
+  139  git diff --ignore-space-change
+  140  git ls-files README.md
+  141  git add -A
+  142  git status
+  143  git status
+  144  git check-ignore -v <my_project>
+  145  git check-ignore -v logs/
+  146  git status
+  147  git add README.md
+  148  git commit -m "Update README.md with changes"
+  149  git push origin main
+  150  git pull origin main
+  151  git add README.md
+  152  git commit -m "Resolved merge conflict in README.md"
+  153  git push origin main
+  154  git fetch origin
+  155  git status
+  156  git add .
+  157  git commit -m "Resolved conflicts and made changes"
+  158  git status
+  159  git add README.md
+  160  git commit -m "Updated README.md"
+  161  git pull origin main
+  162  git add README.md
+  163  git commit -m "Resolved merge conflict in README.md"
+  164  git push origin main
+  165  git status
+  166  git diff
+  167  git rev-parse --show-toplevel
+  168  cd C:/Users/K/Desktop/my_project
+  169  git init
+  170  git remote add origin https://github.com/isiddharth34/my_project.git
+  171  git remote -v
+  172  echo "*.pyc" >> .gitignore
+  173  echo "__pycache__/" >> .gitignore
+  174  echo "venv/" >> .gitignore
+  175  git add .gitignore
+  176  git commit -m "Add .gitignore file"
+  177  git add .
+  178  git commit -m "Initial commit"
+  179  git push -u origin main
+  180  git branch feature-login
+  181  cd /c/Users/K/Desktop/my_project
+  182  git status
+  183  git branch feature-login
+  184  git checkout -b feature-login
+  185  git switch feature-login
+  186  git branch
+  187  git checkout main
+  188  cd ~/Desktop/my_project
+  189  git switch main
+  190  git add .
+  191  git commit -m "Fix: Correct form validation. Fixes #1"
+  192  git branch
+  193  git add .
+  194  git commit -m "Fix: Correct form validation. Fixes #1"
+  195  cd /c/Users/K/Desktop/my_project
+  196  git checkout main
+  197  git pull origin main
+  198  git merge feature-branch
+  199  git branch
+  200  git fetch origin
+  201  git branch -r
+  202  git checkout -b feature-branch origin/feature-branch
+  203  git fetch origin feature-branch
+  204  git checkout -b feature-branch
+  205  git push origin feature-branch
+  206  git checkout main
+  207  git merge feature-branch
+  208  git checkout feature-branch
+  209  git add .
+  210  git commit -m "Add new feature"
+  211  git add .
+  212  git commit -m "Describe the changes made"
+  213  git branch
+  214  git checkout feature-branch
+  215  echo "This is the first line in the file." > example.txt
+  216  ls
+  217  echo "Adding another line to the file." >> example.txt
+  218  git status
+  219  git add example.txt
+  220  git commit -m "Add example.txt with initial content"
+  221  git push origin feature-branch
+  222  git checkout main
+  223   git pull origin main
+  224  git merge feature-branch
+  225  git push origin main
+  226  git branch -d feature-branch
+  227  git push origin --delete feature-branch
+  228  cd /c/Users/K/Desktop/my_project
+  229  git tag
+  230  git tag v1.0
+  231  git log --online
+  232  git log --oneline
+  233  git tag -a v1.0 bf0cf3c -m "Tag message"
+  234  git tag -a v1.1 bf0cf3c -m "Tag message"
+  235  git tags
+  236  git tag
+  237  git show v1.0
+  238  git push origin v1.1
+  239  git push --tags
+  240  git init
+  241  cd /c/Users/K/Desktop/my_project
+  242  git init
+  243  git clone C:/Users/K/Desktop/my_project/.git/
+  244  git push origin branch-name
+  245  git branch
+  246  git checkout -b sid
+  247  git push origin sid
+  248  git remote -v
+  249  git remote set-url origin https://github.com/isiddharth34/my_project.git
+  250  git pull origin sid
+  251  git pull
+  252  git status
+  253  git add my_project/
+  254  git status
+  255  git commit -m "Add my_project directory"
+  256  git push origin sid
+  257  git add .gitignore
+  258  git commit -m "Add my_project/ to .gitignore"
+  259  git push origin sid
+  260  git checkout -b new-feature-branch
+  261  git add .
+  262  git commit -m "Added new feature"
+  263  git push origin new-feature-branch
+  264  git add conflicted-file.txt
+  265  ls
+  266  code conflicted-file.txt
+  267  git checkout -- conflicted-file.txt
+  268  K@DESKTOP-FDI2HMO MINGW64 /
+  269  $ git init
+  270  C:/Program Files/Git/.git: Permission denied
+  271  K@DESKTOP-FDI2HMO MINGW64 /
+  272  $ cd /c/Users/K/Desktop/my_project
+  273  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (main)
+  274  $ git init
+  275  Reinitialized existing Git repository in C:/Users/K/Desktop/my_project/.git/
+  276  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (main)
+  277  $ git clone C:/Users/K/Desktop/my_project/.git/
+  278  Cloning into 'my_project'...
+  279  done.
+  280  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (main)
+  281  $ git push origin branch-name
+  282  error: src refspec branch-name does not match any
+  283  error: failed to push some refs to 'https://github.com/isiddharth34/my_project'
+  284  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (main)
+  285  $ git branch
+  286    feature-login
+  287  * main
+  288  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (main)
+  289  $ git checkout -b sid
+  290  Switched to a new branch 'sid'
+  291  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  292  $ git push origin sid
+  293  Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+  294  remote:
+  295  remote: Create a pull request for 'sid' on GitHub by visiting:
+  296  remote:      https://github.com/isiddharth34/my_project/pull/new/sid
+  297  remote:
+  298  To https://github.com/isiddharth34/my_project
+  299   * [new branch]      sid -> sid
+  300  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  301  $ git remote -v
+  302  origin  https://github.com/isiddharth34/my_project (fetch)
+  303  origin  https://github.com/isiddharth34/my_project (push)
+  304  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  305  $ git remote set-url origin https://github.com/isiddharth34/my_project.git
+  306  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  307  $ git pull origin sid
+  308  From https://github.com/isiddharth34/my_project
+  309   * branch            sid        -> FETCH_HEAD
+  310  Already up to date.
+  311  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  312  $ git pull
+  313  remote: Enumerating objects: 10, done.
+  314  remote: Counting objects: 100% (10/10), done.
+  315  remote: Compressing objects: 100% (6/6), done.
+  316  remote: Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+  317  Unpacking objects: 100% (8/8), 3.51 KiB | 119.00 KiB/s, done.
+  318  From https://github.com/isiddharth34/my_project
+  319     d5cab5f..3547baf  main            -> origin/main
+  320   * [new branch]      master          -> origin/master
+  321   * [new branch]      revert-2-master -> origin/revert-2-master
+  322  There is no tracking information for the current branch.
+  323  Please specify which branch you want to merge with.
+  324  See git-pull(1) for details.
+  325      git pull <remote> <branch>
+  326  If you wish to set tracking information for this branch you can do so with:
+  327      git branch --set-upstream-to=origin/<branch> sid
+  328  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  329  $ git status
+  330  On branch sid
+  331  Untracked files:
+  332    (use "git add <file>..." to include in what will be committed)
+  333          my_project/
+  334  nothing added to commit but untracked files present (use "git add" to track)
+  335  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  336  $ git add my_project/
+  337  warning: adding embedded git repository: my_project
+  338  hint: You've added another git repository inside your current repository.
+  339  hint: Clones of the outer repository will not contain the contents of
+  340  hint: the embedded repository and will not know how to obtain it.
+  341  hint: If you meant to add a submodule, use:
+  342  hint:
+  343  hint:   git submodule add <url> my_project
+  344  hint:
+  345  hint: If you added this path by mistake, you can remove it from the
+  346  hint: index with:
+  347  hint:
+  348  hint:   git rm --cached my_project
+  349  hint:
+  350  hint: See "git help submodule" for more information.
+  351  hint: Disable this message with "git config advice.addEmbeddedRepo false"
+  352  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  353  $ git status
+  354  On branch sid
+  355  Changes to be committed:
+  356    (use "git restore --staged <file>..." to unstage)
+  357          new file:   my_project
+  358  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  359  $ git commit -m "Add my_project directory"
+  360  [sid 97c0a89] Add my_project directory
+  361   1 file changed, 1 insertion(+)
+  362   create mode 160000 my_project
+  363  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  364  $ git push origin sid
+  365  Enumerating objects: 3, done.
+  366  Counting objects: 100% (3/3), done.
+  367  Delta compression using up to 4 threads
+  368  Compressing objects: 100% (2/2), done.
+  369  Writing objects: 100% (2/2), 355 bytes | 355.00 KiB/s, done.
+  370  Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+  371  To https://github.com/isiddharth34/my_project.git
+  372     d5cab5f..97c0a89  sid -> sid
+  373  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  374  $ git add .gitignore
+  375  git commit -m "Add my_project/ to .gitignore"
+  376  fatal: pathspec '.gitignore' did not match any files
+  377  On branch sid
+  378  nothing to commit, working tree clean
+  379  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  380  $ git push origin sid
+  381  Everything up-to-date
+  382  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (sid)
+  383  $ git checkout -b new-feature-branch
+  384  Switched to a new branch 'new-feature-branch'
+  385  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  386  $ git add .
+  387  git commit -m "Added new feature"
+  388  On branch new-feature-branch
+  389  nothing to commit, working tree clean
+  390  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  391  $ git push origin new-feature-branch
+  392  Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+  393  remote:
+  394  remote: Create a pull request for 'new-feature-branch' on GitHub by visiting:
+  395  remote:      https://github.com/isiddharth34/my_project/pull/new/new-feature-branch
+  396  remote:
+  397  To https://github.com/isiddharth34/my_project.git
+  398   * [new branch]      new-feature-branch -> new-feature-branch
+  399  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  400  $ git add conflicted-file.txt
+  401  fatal: pathspec 'conflicted-file.txt' did not match any files
+  402  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  403  $ ls
+  404  README.md  example.txt  my_project/  test.txt
+  405  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  406  $ code conflicted-file.txt
+  407  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  408  $ git checkout -- conflicted-file.txt
+  409  error: pathspec 'conflicted-file.txt' did not match any file(s) known to git
+  410  K@DESKTOP-FDI2HMO MINGW64 ~/Desktop/my_project (new-feature-branch)
+  411  git status
+  412  cd "C:\Users\K\Documents\coding\python"
+  413  git init
+  414  git add .
+  415  cd "C:\Users\K\Documents\coding\python"
+  416  git init
+  417  git add .
+  418  git commit -m "Initial commit of women safety project"
+  419  git remote add origin https://github.com/siddengineer/women-safety-project.git
+  420  git branch -M main
+  421  git push -u origin main
+  422  git add .
+  423  git commit -m "Initial commit of women safety project"
+  424  cd /c/Users/K/Desktop/my_project
+  425  git checkout -b feature-branch
+  426  git add .
+  427  git commit -m "Add new feature"
+  428  git push origin feature-branch
+  429  git fetch origin
+  430  git branch -r
+  431  git checkout --track origin/feature-branch
+  432  git merge origin/feature-branch
+  433  git push origin feature-branch
+  434  cd '/c/Users/K/Documents/coding/python/tommorows ai today.py'
+  435  git init
+  436  git clone https://github.com/isiddharth34/my_project.git
+  437  cd my_project
+  438  cd /c/Users/K/Desktop/my_project
+  439  git clone https://github.com/isiddharth34/my_project.git
+  440  cd /c/Users/K/Desktop/my_project
+  441  git switch main
+  442  git checkout feature-main
+  443  git checkout main
+  444  git rebase main
+  445  git rebase-1 HEAD-3
+  446  git rebase -i HEAD~3
+  447  cd /c/Users/K/Documents/coding/python/fastapi
+  448  git add.
+  449  git add .
+  450  git init
+  451  git remote add origin https://github.com/siddengineer/fastapi.git
+  452  git add .
+  453  git commit -m "Reinitialized repo and added FastAPI Hello World - Day 1"
+  454  git branch -M main  # Ensures you're on the main branch
+  455  git push -u origin main
+  456  git config --global user.name
+  457  git config --global user.email
+  458  git config --global user.name "siddengineer"
+  459  git config --global user.email "siddharthpatil7381@gmail.com"
+  460  git credential reject https://github.com
+  461  origin  git@github.com:siddengineer/fastapi.git (fetch)
+  462  origin  git@github.com:siddengineer/fastapi.git (push)
+  463  ls ~/.ssh
+  464  ssh-keygen -t rsa -b 4096 -C "siddharthpatil7381@gmail.com"
+  465  cat ~/.ssh/id_rsa.pub
+  466  ssh -T git@github.com
+  467  git remote set-url origin git@github.com:siddengineer/fastapi.git
+  468  git push -u origin main
+  469  echo "# FastAPI Project - Day 1" > README.md
+  470  git add .
+  471  git commit -m "Added FastAPI Day 1 project with README"
+  472  git push origin main
+  473  echo "# FastAPI Project - Day 1
+
+This is my first FastAPI project. Today, I created a simple API with two endpoints:
+
+- \`/\` → Returns \`{\"Hello\": \"World\"}\`
+- \`/items/{item_id}\` → Returns item details with an optional query parameter.
+
+## How to Run
+
+1. Install FastAPI and Uvicorn:
+   \`\`\`
+   pip install fastapi uvicorn
+   \`\`\`
+2. Run the server:
+   \`\`\`
+   uvicorn main:app --reload
+   \`\`\`
+3. Open in browser or test in Postman:
+   - \`http://127.0.0.1:8000/\`
+   - \`http://127.0.0.1:8000/items/1?q=test\`
+
+## Future Plans
+- Add more routes
+- Connect to a database
+- Implement authentication
+
+🚀 Stay tuned for updates!
+" > README.md
+  474  git add README.md
+  475  git commit -m "Added full README.md for FastAPI Day 1"
+  476  git push origin main
+  477  history > commands.txt
