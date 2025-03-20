@@ -1,0 +1,108 @@
+fastapi path and query 
+//--------------------------------------------------------------------
+Path Parameters
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_item(item_id):
+    return {"item_id": item_id}
+
+
+//--------------------------------------------------------------
+Path parameters with types
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_item(item_id: int):
+    return {"item_id": item_id}
+
+//-----------------------------------------------------------------------
+Data validation
+
+
+Delivery Tracking with Validation and Logging
+
+
+
+
+from datetime import datetime
+import logfire
+from pydantic import BaseModel
+
+# Logfire configuration
+logfire.configure()
+logfire.instrument_pydantic()
+
+# Define the Delivery model with validation
+class Delivery(BaseModel):
+    timestamp: datetime  # The time when the delivery happened
+    dimensions: tuple[int, int]  # Package dimensions (length, width)
+
+# Function to simulate processing a delivery from an API or file
+def process_delivery(data):
+    try:
+        # Create a Delivery instance (this will validate the data)
+        delivery = Delivery(**data)
+        print(f"Delivery processed successfully: {delivery}")
+    except Exception as e:
+        # Log the validation failure using Logfire
+        logfire.error(f"Failed to process delivery: {str(e)}")
+        print(f"Error processing delivery: {str(e)}")
+
+# Simulate receiving a valid delivery
+delivery_data_1 = {
+    "timestamp": "2023-09-01T14:25:00Z",  # Valid timestamp
+    "dimensions": ["15", "20"],  # Valid dimensions (strings to be converted to integers)
+}
+
+process_delivery(delivery_data_1)
+
+# Simulate receiving an invalid delivery (missing dimension)
+delivery_data_2 = {
+    "timestamp": "2023-09-01T14:25:00Z",  # Valid timestamp
+    "dimensions": ["15"],  # Invalid dimensions (only one value instead of two)
+}
+
+process_delivery(delivery_data_2)
+
+
+Delivery processed successfully: timestamp=datetime.datetime(2023, 9, 1, 14, 25, tzinfo=<UTC>), dimensions=(15, 20)
+Error processing delivery: 1 validation error for Delivery
+dimensions
+  2 values required, 1 given (type=value_error.list.min_items; limit_value=2)
+
+
+
+//-------------------------------------------------------------------------------------------------------------
+Order matters
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/users/me")
+async def read_user_me():
+    return {"user_id": "the current user"}
+
+
+@app.get("/users/{user_id}")
+async def read_user(user_id: str):
+    return {"user_id": user_id}
+
+
+//------------------------------------------------------------------------------------------------
+Because path operations are evaluated in order, you need to make sure that the path for /users/me is declared before the one for /users/{user_id}:
+
+
+
+
+
