@@ -1,0 +1,235 @@
+1. Set Up the FastAPI App
+Start by importing necessary modules and creating the FastAPI app.
+
+Code:
+python
+Copy
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List
+
+app = FastAPI()
+Explanation:
+FastAPI: The main class that initializes the API app.
+HTTPException: Used to raise errors with a custom status code and message.
+BaseModel: Used to define request and response models using Pydantic (for validation).
+List: To handle lists of items (for example, returning multiple books).
+2. Define the Book Model (Pydantic)
+You need to define the data model for the books so that FastAPI knows what data to expect for creating and displaying books.
+
+Code:
+python
+Copy
+class Book(BaseModel):
+    title: str
+    author: str
+    price: float
+    published_year: int
+    isbn: str
+Explanation:
+BaseModel: Pydantic’s BaseModel is used to define the fields and validation for your data models.
+Book Fields:
+title: The title of the book (string).
+author: The author of the book (string).
+price: Price of the book (float).
+published_year: The year the book was published (integer).
+isbn: The book's ISBN number (string).
+3. In-Memory Fake Database
+Now, let’s create a simulated in-memory database (using a Python dictionary) to store the books.
+
+Code:
+python
+Copy
+fake_db = {
+    1: Book(
+        title="The Great Gatsby",
+        author="F. Scott Fitzgerald",
+        price=10.99,
+        published_year=1925,
+        isbn="9780743273565"
+    ),
+    2: Book(
+        title="1984",
+        author="George Orwell",
+        price=8.99,
+        published_year=1949,
+        isbn="9780451524935"
+    ),
+    3: Book(
+        title="To Kill a Mockingbird",
+        author="Harper Lee",
+        price=7.99,
+        published_year=1960,
+        isbn="9780061120084"
+    )
+}
+Explanation:
+fake_db: This dictionary acts as an in-memory database where book IDs are the keys, and the Book data is stored as values.
+Each book in the fake_db has an ID (starting from 1) and contains information about the title, author, price, published year, and ISBN.
+4. Creating a Book (POST Route)
+The POST route allows users to create a new book. This will add the book to the fake_db.
+
+Code:
+python
+Copy
+@app.post("/books/", response_model=Book)
+def create_book(book: Book):
+    book_id = len(fake_db) + 1  # Simple auto-increment ID
+    fake_db[book_id] = book
+    return {"message": "Book created successfully!", "book_id": book_id, "book": book}
+Explanation:
+POST /books/: This route is used for creating a new book.
+book: Book: This is the input data for creating a new book. FastAPI will automatically parse and validate the request body based on the Book model.
+Auto-increment book_id: We calculate the new book_id by getting the length of fake_db and adding 1 to it. This makes sure each book gets a unique ID.
+Response: We return a success message and the book_id of the newly created book.
+5. Retrieving a Book by ID (GET Route)
+This route allows users to retrieve a book by its ID. If the book ID doesn't exist, we return a 404 error with a custom message.
+
+Code:
+python
+Copy
+@app.get("/books/{book_id}", response_model=Book)
+def read_book(book_id: int):
+    book = fake_db.get(book_id)
+    if book:
+        return book
+    raise HTTPException(status_code=404, detail="Book not found")
+Explanation:
+GET /books/{book_id}: This route retrieves a book by its unique book_id.
+book = fake_db.get(book_id): We look for the book in fake_db using the provided book_id.
+Error Handling: If the book_id is not found in fake_db, we raise a 404 HTTPException with the message "Book not found".
+6. Updating a Book (PUT Route)
+This route allows users to update an existing book by its book_id.
+
+Code:
+python
+Copy
+@app.put("/books/{book_id}", response_model=Book)
+def update_book(book_id: int, book: Book):
+    if book_id in fake_db:
+        fake_db[book_id] = book
+        return book
+    raise HTTPException(status_code=404, detail="Book not found")
+Explanation:
+PUT /books/{book_id}: This route updates a book with the provided book_id.
+Check if book_id exists: Before updating the book, we check if the book_id exists in fake_db.
+Update: If the book exists, we replace the old book with the new one provided in the request body.
+Error Handling: If the book_id is not found, we return a 404 error.
+7. Deleting a Book (DELETE Route)
+This route allows users to delete a book from the fake_db using the book_id.
+
+Code:
+python
+Copy
+@app.delete("/books/{book_id}")
+def delete_book(book_id: int):
+    if book_id in fake_db:
+        del fake_db[book_id]
+        return {"message": f"Book with ID {book_id} deleted successfully!"}
+    raise HTTPException(status_code=404, detail="Book not found")
+Explanation:
+DELETE /books/{book_id}: This route deletes a book by its book_id.
+Check if book_id exists: We check if the book_id exists in fake_db.
+Delete: If the book exists, we remove it from fake_db using del.
+Error Handling: If the book_id is not found, we return a 404 error.
+8. Retrieve All Books (GET Route)
+This route allows users to retrieve a list of all books in the fake_db.
+
+Code:
+python
+Copy
+@app.get("/books/", response_model=List[Book])
+def read_books():
+    return list(fake_db.values())
+Explanation:
+GET /books/: This route retrieves all the books in the fake_db.
+Return All Books: We use list(fake_db.values()) to get all the books in the dictionary as a list.
+Response: A list of all books will be returned.
+Summary of How to Write FastAPI Routes
+Set Up FastAPI App: Import FastAPI, HTTPException, and any necessary models.
+Define Models: Use Pydantic (BaseModel) to define the shape of the data you expect (e.g., Book).
+Create Routes:
+Use @app.get, @app.post, @app.put, and @app.delete to define your API endpoints.
+Handle input and output with Pydantic models (for request validation and response serialization).
+Handle Errors: Use HTTPException to raise errors with custom status codes and messages.
+Use In-Memory or Real Database: For testing, use an in-memory database like a dictionary (fake_db). For production, connect to a real database.
+
+
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List
+
+app = FastAPI()
+
+# Define a Pydantic model for the Book
+class Book(BaseModel):
+    title: str
+    author: str
+    price: float
+    published_year: int
+    isbn: str
+
+# In-memory database (pre-filled data)
+fake_db = {
+    1: Book(
+        title="The Great Gatsby",
+        author="F. Scott Fitzgerald",
+        price=10.99,
+        published_year=1925,
+        isbn="9780743273565"
+    ),
+    2: Book(
+        title="1984",
+        author="George Orwell",
+        price=8.99,
+        published_year=1949,
+        isbn="9780451524935"
+    ),
+    3: Book(
+        title="To Kill a Mockingbird",
+        author="Harper Lee",
+        price=7.99,
+        published_year=1960,
+        isbn="9780061120084"
+    )
+}
+
+# POST route: Create a new book
+@app.post("/books/", response_model=Book)
+def create_book(book: Book):
+    book_id = len(fake_db) + 1  # Simple auto-increment ID
+    fake_db[book_id] = book
+    return {"message": "Book created successfully!", "book_id": book_id, "book": book}
+
+# PUT route: Update an existing book by ID
+@app.put("/books/{book_id}", response_model=Book)
+def update_book(book_id: int, book: Book):
+    if book_id in fake_db:
+        fake_db[book_id] = book
+        return book
+    raise HTTPException(status_code=404, detail="Book not found")
+
+# DELETE route: Delete a book by ID
+@app.delete("/books/{book_id}")
+def delete_book(book_id: int):
+    if book_id in fake_db:
+        del fake_db[book_id]
+        return {"message": f"Book with ID {book_id} deleted successfully!"}
+    raise HTTPException(status_code=404, detail="Book not found")
+
+# GET route: Get a book by ID
+@app.get("/books/{book_id}", response_model=Book)
+def read_book(book_id: int):
+    book = fake_db.get(book_id)
+    if book:
+        return book
+    raise HTTPException(status_code=404, detail="Book not found")
+
+# GET route: Get a list of all books
+@app.get("/books/", response_model=List[Book])
+def read_books():
+    return list(fake_db.values())
+
+
+
