@@ -1,0 +1,82 @@
+middleware 
+from fastapi import FastAPI, Request, Response
+
+app = FastAPI()
+
+# Middleware function
+@app.middleware("http")
+async def custom_middleware(request: Request, call_next):
+    # Step 2: Process the request (e.g., logging)
+    print(f"Request: {request.method} {request.url}")
+
+    # Step 3: Pass the request to the next middleware or path operation
+    response: Response = await call_next(request)
+
+    # Step 5: Process the response (e.g., logging)
+    print(f"Response status: {response.status_code}")
+
+    # Step 6: Return the response
+    return response
+
+@app.get("/")
+async def read_root():
+    return {"Hello": "World"}
+
+1. Receiving the Request
+
+When a client (like a web browser or mobile app) sends a request to your application (e.g., an HTTP request), the application receives it. This request could be for various resources, such as data from a database, a web page, or an API endpoint.
+2. Processing the Request
+
+Before the request is processed by the main application logic, middleware can intercept it. This is where you can perform various tasks, such as:
+
+    Logging: Record details about the request (e.g., timestamp, request method, URL).
+    Authentication: Check if the user is authenticated and authorized to access the requested resource.
+    Validation: Validate the request data (e.g., check if required fields are present).
+    Modifying the Request: Add or modify headers, parameters, or body content.
+
+3. Passing the Request to the Application
+
+After the middleware has done its job with the request, it passes the request along to the next part of the application, often referred to as a "path operation" or "route handler." This is where the main logic of your application processes the request, interacts with databases, and prepares a response.
+4. Generating the Response
+
+Once the path operation has processed the request, it generates a response. This response could be in various formats, such as JSON, HTML, or XML, depending on what the client expects.
+5. Processing the Response
+
+After the response is generated, the middleware can again intercept it. Here, you can perform additional tasks, such as:
+
+    Modifying the Response: Change headers, add cookies, or modify the response body.
+    Logging: Record details about the response (e.g., status code, response time).
+    Error Handling: Catch any errors that occurred during processing and modify the response accordingly.
+
+6. Returning the Response
+
+Finally, the middleware returns the response to the client. This completes the request-response cycle.
+
+//------------------------------------------------------------------------cors
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+origins = [
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/")
+async def main():
+    return {"message": "Hello World"}
+
+//-----------------------------------------------------------------------------------------------------
